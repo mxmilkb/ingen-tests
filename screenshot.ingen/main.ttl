@@ -1,0 +1,1108 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix ingen: <http://drobilla.net/ns/ingen#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix midi: <http://lv2plug.in/ns/ext/midi#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix patch: <http://lv2plug.in/ns/ext/patch#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<TalDub3>
+	ingen:canvasX 706.81994629 ;
+	ingen:canvasY 192.222229 ;
+	<http://lv2plug.in/ns/ext/state#state> <TalDub3/state.ttl> ;
+	lv2:port <TalDub3/cutoff> ,
+		<TalDub3/delaytime> ,
+		<TalDub3/delaytimesync> ,
+		<TalDub3/delaytwice_l> ,
+		<TalDub3/delaytwice_r> ,
+		<TalDub3/dry> ,
+		<TalDub3/feedback> ,
+		<TalDub3/highcut> ,
+		<TalDub3/inputdrive> ,
+		<TalDub3/livemode> ,
+		<TalDub3/lv2_audio_in_1> ,
+		<TalDub3/lv2_audio_in_2> ,
+		<TalDub3/lv2_audio_out_1> ,
+		<TalDub3/lv2_audio_out_2> ,
+		<TalDub3/lv2_events_in> ,
+		<TalDub3/lv2_freewheel> ,
+		<TalDub3/lv2_port_14> ,
+		<TalDub3/resonance> ,
+		<TalDub3/unused> ,
+		<TalDub3/wet> ;
+	lv2:prototype <urn:juce:TalDub3> ;
+	a ingen:Block .
+
+<TalDub3/cutoff>
+	ingen:value 0.54799998 ;
+	lv2:index 13 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/delaytime>
+	ingen:value 0.23899999 ;
+	lv2:index 7 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/delaytimesync>
+	ingen:value 0.47368401 ;
+	lv2:index 8 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/delaytwice_l>
+	ingen:value 0.0 ;
+	lv2:index 9 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/delaytwice_r>
+	ingen:value 1.0 ;
+	lv2:index 10 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/dry>
+	ingen:value 0.5 ;
+	lv2:index 15 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/feedback>
+	ingen:value 0.148 ;
+	lv2:index 11 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/highcut>
+	ingen:value 0.252 ;
+	lv2:index 12 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/inputdrive>
+	ingen:value 0.40799999 ;
+	lv2:index 6 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/livemode>
+	ingen:value 0.0 ;
+	lv2:index 18 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/lv2_audio_in_1>
+	lv2:index 2 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<TalDub3/lv2_audio_in_2>
+	lv2:index 3 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<TalDub3/lv2_audio_out_1>
+	lv2:index 4 ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<TalDub3/lv2_audio_out_2>
+	lv2:index 5 ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<TalDub3/lv2_events_in>
+	atom:bufferType atom:Sequence ;
+	atom:supports <http://lv2plug.in/ns/ext/time#Position> ;
+	lv2:designation lv2:control ;
+	lv2:index 0 ;
+	lv2:portProperty lv2:connectionOptional ;
+	a atom:AtomPort ,
+		lv2:InputPort .
+
+<TalDub3/lv2_freewheel>
+	ingen:value 0.0 ;
+	lv2:designation lv2:freeWheeling ;
+	lv2:index 1 ;
+	lv2:portProperty <http://lv2plug.in/ns/ext/port-props#notOnGUI> ,
+		lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/lv2_port_14>
+	ingen:value 0.0 ;
+	lv2:index 19 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/resonance>
+	ingen:value 0.43200001 ;
+	lv2:index 14 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/unused>
+	ingen:value 0.0 ;
+	lv2:index 17 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<TalDub3/wet>
+	ingen:value 0.44 ;
+	lv2:index 16 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<Xmonk_lv2>
+	ingen:canvasX 1179.07336426 ;
+	ingen:canvasY 807.95532227 ;
+	lv2:port <Xmonk_lv2/GAIN> ,
+		<Xmonk_lv2/GATE> ,
+		<Xmonk_lv2/MIDIGATE> ,
+		<Xmonk_lv2/MIDINOTE> ,
+		<Xmonk_lv2/MIDIVOWEL> ,
+		<Xmonk_lv2/MIDI_IN> ,
+		<Xmonk_lv2/NOTE> ,
+		<Xmonk_lv2/PANIC> ,
+		<Xmonk_lv2/SCALE> ,
+		<Xmonk_lv2/SUSTAIN> ,
+		<Xmonk_lv2/VOWEL> ,
+		<Xmonk_lv2/out> ,
+		<Xmonk_lv2/out1> ;
+	lv2:prototype <https://github.com/brummer10/Xmonk.lv2> ;
+	a ingen:Block .
+
+<Xmonk_lv2/GAIN>
+	ingen:value 0.26056021 ;
+	lv2:index 3 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<Xmonk_lv2/GATE>
+	ingen:value 0.0 ;
+	lv2:index 4 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<Xmonk_lv2/MIDIGATE>
+	lv2:index 12 ;
+	lv2:portProperty <http://lv2plug.in/ns/ext/port-props#notOnGUI> ,
+		lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:OutputPort .
+
+<Xmonk_lv2/MIDINOTE>
+	lv2:index 10 ;
+	lv2:portProperty <http://lv2plug.in/ns/ext/port-props#notOnGUI> ;
+	a lv2:ControlPort ,
+		lv2:OutputPort .
+
+<Xmonk_lv2/MIDIVOWEL>
+	lv2:index 11 ;
+	lv2:portProperty <http://lv2plug.in/ns/ext/port-props#notOnGUI> ;
+	a lv2:ControlPort ,
+		lv2:OutputPort .
+
+<Xmonk_lv2/MIDI_IN>
+	atom:bufferType atom:Sequence ;
+	atom:supports midi:MidiEvent ;
+	lv2:designation lv2:control ;
+	lv2:index 6 ;
+	a atom:AtomPort ,
+		lv2:InputPort .
+
+<Xmonk_lv2/NOTE>
+	ingen:value 40.0 ;
+	lv2:index 2 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<Xmonk_lv2/PANIC>
+	ingen:value 1.0 ;
+	lv2:index 9 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<Xmonk_lv2/SCALE>
+	ingen:value 0.0 ;
+	lv2:index 7 ;
+	lv2:portProperty lv2:enumeration ,
+		lv2:integer ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<Xmonk_lv2/SUSTAIN>
+	ingen:value 0.0 ;
+	lv2:index 8 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<Xmonk_lv2/VOWEL>
+	ingen:value 0.64472508 ;
+	lv2:index 5 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<Xmonk_lv2/out>
+	lv2:index 0 ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<Xmonk_lv2/out1>
+	lv2:index 1 ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<audio_in_1>
+	ingen:canvasX 507.5760498 ;
+	ingen:canvasY 244.222229 ;
+	lv2:index 2 ;
+	lv2:name "Audio In 1" ;
+	lv2:symbol "audio_in_1" ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<audio_in_2>
+	ingen:canvasX 507.38140869 ;
+	ingen:canvasY 288.04818726 ;
+	lv2:index 3 ;
+	lv2:name "Audio In 2" ;
+	lv2:symbol "audio_in_2" ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<control>
+	ingen:canvasX 498.1111145 ;
+	ingen:canvasY 44.222229 ;
+	atom:bufferType atom:Sequence ;
+	atom:supports patch:Message ;
+	<http://lv2plug.in/ns/ext/resize-port#minimumSize> 4096 ;
+	lv2:designation lv2:control ;
+	lv2:index 0 ;
+	lv2:name "Control" ;
+	lv2:portProperty lv2:connectionOptional ;
+	lv2:symbol "control" ;
+	a atom:AtomPort ,
+		lv2:InputPort .
+
+<controltocv>
+	ingen:canvasX 888.26489258 ;
+	ingen:canvasY 137.94857788 ;
+	ingen:polyphonic true ;
+	lv2:port <controltocv/input> ,
+		<controltocv/output> ;
+	lv2:prototype <http://github.com/blablack/ams-lv2/controltocv> ;
+	a ingen:Block .
+
+<controltocv/input>
+	ingen:value 0.01670574 ;
+	lv2:index 0 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<controltocv/output>
+	lv2:index 1 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<cvtocontrol>
+	ingen:canvasX 917.10266113 ;
+	ingen:canvasY 845.95837402 ;
+	ingen:polyphonic true ;
+	lv2:port <cvtocontrol/input> ,
+		<cvtocontrol/output> ;
+	lv2:prototype <http://github.com/blablack/ams-lv2/cvtocontrol> ;
+	a ingen:Block .
+
+<cvtocontrol/input>
+	ingen:value 0.65022147 ;
+	lv2:index 0 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<cvtocontrol/output>
+	lv2:index 1 ;
+	a lv2:ControlPort ,
+		lv2:OutputPort .
+
+<cvtocontrol_2>
+	ingen:canvasX 1303.65405273 ;
+	ingen:canvasY 714.80407715 ;
+	ingen:polyphonic true ;
+	lv2:port <cvtocontrol_2/input> ,
+		<cvtocontrol_2/output> ;
+	lv2:prototype <http://github.com/blablack/ams-lv2/cvtocontrol> ;
+	a ingen:Block .
+
+<cvtocontrol_2/input>
+	ingen:value 0.814973 ;
+	lv2:index 0 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<cvtocontrol_2/output>
+	lv2:index 1 ;
+	a lv2:ControlPort ,
+		lv2:OutputPort .
+
+<cvtocontrol_3>
+	ingen:canvasX 1269.48754883 ;
+	ingen:canvasY 618.63323975 ;
+	ingen:polyphonic true ;
+	lv2:port <cvtocontrol_3/input> ,
+		<cvtocontrol_3/output> ;
+	lv2:prototype <http://github.com/blablack/ams-lv2/cvtocontrol> ;
+	a ingen:Block .
+
+<cvtocontrol_3/input>
+	ingen:value -0.814973 ;
+	lv2:index 0 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<cvtocontrol_3/output>
+	lv2:index 1 ;
+	a lv2:ControlPort ,
+		lv2:OutputPort .
+
+<inv>
+	ingen:canvasX 1197.85168457 ;
+	ingen:canvasY 713.36401367 ;
+	ingen:polyphonic true ;
+	lv2:port <inv/input> ,
+		<inv/output> ;
+	lv2:prototype <http://plugin.org.uk/swh-plugins/inv> ;
+	a ingen:Block .
+
+<inv/input>
+	lv2:index 0 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<inv/output>
+	lv2:index 1 ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<lfo>
+	ingen:canvasX 982.70428467 ;
+	ingen:canvasY 588.43811035 ;
+	ingen:polyphonic true ;
+	lv2:port <lfo/freq> ,
+		<lfo/outRectangle> ,
+		<lfo/outSampleHold> ,
+		<lfo/outSawDown> ,
+		<lfo/outSawUp> ,
+		<lfo/outSine> ,
+		<lfo/outTriangle> ,
+		<lfo/phi0> ,
+		<lfo/reset> ;
+	lv2:prototype <http://github.com/blablack/ams-lv2/lfo> ;
+	a ingen:Block .
+
+<lfo/freq>
+	ingen:value 0.22418942 ;
+	lv2:index 1 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<lfo/outRectangle>
+	lv2:index 7 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/outSampleHold>
+	lv2:index 8 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/outSawDown>
+	lv2:index 6 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/outSawUp>
+	lv2:index 5 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/outSine>
+	lv2:index 3 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/outTriangle>
+	lv2:index 4 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/phi0>
+	ingen:value 0.0 ;
+	lv2:index 2 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<lfo/reset>
+	ingen:value 0.0 ;
+	lv2:index 0 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<lfo_2>
+	ingen:canvasX 707.0 ;
+	ingen:canvasY 719.0 ;
+	ingen:polyphonic true ;
+	lv2:port <lfo_2/freq> ,
+		<lfo_2/outRectangle> ,
+		<lfo_2/outSampleHold> ,
+		<lfo_2/outSawDown> ,
+		<lfo_2/outSawUp> ,
+		<lfo_2/outSine> ,
+		<lfo_2/outTriangle> ,
+		<lfo_2/phi0> ,
+		<lfo_2/reset> ;
+	lv2:prototype <http://github.com/blablack/ams-lv2/lfo> ;
+	a ingen:Block .
+
+<lfo_2/freq>
+	ingen:value 0.25738963 ;
+	lv2:index 1 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<lfo_2/outRectangle>
+	lv2:index 7 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo_2/outSampleHold>
+	lv2:index 8 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo_2/outSawDown>
+	lv2:index 6 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo_2/outSawUp>
+	lv2:index 5 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo_2/outSine>
+	lv2:index 3 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo_2/outTriangle>
+	lv2:index 4 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo_2/phi0>
+	ingen:value 0.0 ;
+	lv2:index 2 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<lfo_2/reset>
+	ingen:value 0.0 ;
+	lv2:index 0 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<>
+	ingen:arc [
+		ingen:head <mvclpf4/in> ;
+		ingen:tail <TalDub3/lv2_audio_out_1>
+	] , [
+		ingen:head <stereomixer_8ch/in1> ;
+		ingen:tail <mvclpf4/out>
+	] , [
+		ingen:head <cvtocontrol_2/input> ;
+		ingen:tail <inv/output>
+	] , [
+		ingen:head <stereomixer_8ch/pan3> ;
+		ingen:tail <cvtocontrol_3/output>
+	] , [
+		ingen:head <mvclpf4/fm> ;
+		ingen:tail <controltocv/output>
+	] , [
+		ingen:head <mvclpf4_2/fm> ;
+		ingen:tail <controltocv/output>
+	] , [
+		ingen:head <mvclpf4_2/in> ;
+		ingen:tail <TalDub3/lv2_audio_out_2>
+	] , [
+		ingen:head <TalDub3/lv2_audio_in_2> ;
+		ingen:tail <audio_in_2>
+	] , [
+		ingen:head <TalDub3/lv2_audio_in_1> ;
+		ingen:tail <audio_in_1>
+	] , [
+		ingen:head <stereomixer_8ch/in2> ;
+		ingen:tail <mvclpf4_2/out>
+	] , [
+		ingen:head <cvtocontrol/input> ;
+		ingen:tail <lfo_2/outSawUp>
+	] , [
+		ingen:head <stereomixer_8ch/in3> ;
+		ingen:tail <Xmonk_lv2/out>
+	] , [
+		ingen:head <stereomixer_8ch/in4> ;
+		ingen:tail <Xmonk_lv2/out1>
+	] , [
+		ingen:head <Xmonk_lv2/VOWEL> ;
+		ingen:tail <cvtocontrol/output>
+	] , [
+		ingen:head <cvtocontrol_3/input> ;
+		ingen:tail <lfo/outSine>
+	] , [
+		ingen:head <inv/input> ;
+		ingen:tail <lfo/outSine>
+	] , [
+		ingen:head <stereomixer_8ch/pan4> ;
+		ingen:tail <cvtocontrol_2/output>
+	] ;
+	ingen:block <TalDub3> ,
+		<Xmonk_lv2> ,
+		<controltocv> ,
+		<cvtocontrol> ,
+		<cvtocontrol_2> ,
+		<cvtocontrol_3> ,
+		<inv> ,
+		<lfo> ,
+		<lfo_2> ,
+		<mvclpf4> ,
+		<mvclpf4_2> ,
+		<stereomixer_8ch> ;
+	ingen:polyphony 1 ;
+	<http://lv2plug.in/ns/extensions/ui#ui> ingen:GraphUIGtk2 ;
+	lv2:extensionData <http://lv2plug.in/ns/ext/state#interface> ;
+	lv2:port <audio_in_1> ,
+		<audio_in_2> ,
+		<control> ,
+		<notify> ;
+	doap:name "screenshot" ;
+	a ingen:Graph ,
+		lv2:Plugin .
+
+<mvclpf4>
+	ingen:canvasX 1149.55285645 ;
+	ingen:canvasY 186.42987061 ;
+	ingen:polyphonic false ;
+	lv2:port <mvclpf4/exp_fm> ,
+		<mvclpf4/exp_fm_gain> ,
+		<mvclpf4/fm> ,
+		<mvclpf4/freq> ,
+		<mvclpf4/in> ,
+		<mvclpf4/out> ,
+		<mvclpf4/out_gain> ,
+		<mvclpf4/poles> ,
+		<mvclpf4/port5> ,
+		<mvclpf4/res> ,
+		<mvclpf4/res_gain> ,
+		<mvclpf4/res_mod> ;
+	lv2:prototype <http://drobilla.net/plugins/fomp/mvclpf4> ;
+	a ingen:Block .
+
+<mvclpf4/exp_fm>
+	ingen:value 0.36043647 ;
+	lv2:index 3 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<mvclpf4/exp_fm_gain>
+	ingen:value 0.0 ;
+	lv2:index 7 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4/fm>
+	ingen:value 0.01670574 ;
+	lv2:index 2 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<mvclpf4/freq>
+	ingen:value 440.0 ;
+	lv2:index 6 ;
+	lv2:portProperty <http://lv2plug.in/ns/ext/port-props#logarithmic> ,
+		lv2:sampleRate ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4/in>
+	lv2:index 0 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<mvclpf4/out>
+	lv2:index 1 ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<mvclpf4/out_gain>
+	ingen:value 0.0 ;
+	lv2:index 11 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4/poles>
+	ingen:value 0.0 ;
+	lv2:index 10 ;
+	lv2:portProperty lv2:integer ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4/port5>
+	ingen:value 0.0 ;
+	lv2:index 5 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4/res>
+	ingen:value 0.0 ;
+	lv2:index 8 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4/res_gain>
+	ingen:value 0.0 ;
+	lv2:index 9 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4/res_mod>
+	ingen:value 0.0 ;
+	lv2:index 4 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<mvclpf4_2>
+	ingen:canvasX 1085.20935059 ;
+	ingen:canvasY 268.64385986 ;
+	ingen:polyphonic true ;
+	lv2:port <mvclpf4_2/exp_fm> ,
+		<mvclpf4_2/exp_fm_gain> ,
+		<mvclpf4_2/fm> ,
+		<mvclpf4_2/freq> ,
+		<mvclpf4_2/in> ,
+		<mvclpf4_2/out> ,
+		<mvclpf4_2/out_gain> ,
+		<mvclpf4_2/poles> ,
+		<mvclpf4_2/port5> ,
+		<mvclpf4_2/res> ,
+		<mvclpf4_2/res_gain> ,
+		<mvclpf4_2/res_mod> ;
+	lv2:prototype <http://drobilla.net/plugins/fomp/mvclpf4> ;
+	a ingen:Block .
+
+<mvclpf4_2/exp_fm>
+	ingen:value 0.39397901 ;
+	lv2:index 3 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<mvclpf4_2/exp_fm_gain>
+	ingen:value 0.0 ;
+	lv2:index 7 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4_2/fm>
+	ingen:value 0.01670574 ;
+	lv2:index 2 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<mvclpf4_2/freq>
+	ingen:value 440.0 ;
+	lv2:index 6 ;
+	lv2:portProperty <http://lv2plug.in/ns/ext/port-props#logarithmic> ,
+		lv2:sampleRate ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4_2/in>
+	lv2:index 0 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<mvclpf4_2/out>
+	lv2:index 1 ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<mvclpf4_2/out_gain>
+	ingen:value 0.0 ;
+	lv2:index 11 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4_2/poles>
+	ingen:value 0.0 ;
+	lv2:index 10 ;
+	lv2:portProperty lv2:integer ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4_2/port5>
+	ingen:value 0.0 ;
+	lv2:index 5 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4_2/res>
+	ingen:value 0.0 ;
+	lv2:index 8 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4_2/res_gain>
+	ingen:value 0.0 ;
+	lv2:index 9 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<mvclpf4_2/res_mod>
+	ingen:value 0.0 ;
+	lv2:index 4 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<notify>
+	ingen:canvasX 600.11108398 ;
+	ingen:canvasY 45.222229 ;
+	atom:bufferType atom:Sequence ;
+	atom:supports patch:Message ;
+	<http://lv2plug.in/ns/ext/resize-port#minimumSize> 4096 ;
+	lv2:designation lv2:control ;
+	lv2:index 1 ;
+	lv2:name "Notify" ;
+	lv2:portProperty lv2:connectionOptional ;
+	lv2:symbol "notify" ;
+	a atom:AtomPort ,
+		lv2:OutputPort .
+
+<stereomixer_8ch>
+	ingen:canvasX 1501.91259766 ;
+	ingen:canvasY 401.32138062 ;
+	ingen:polyphonic true ;
+	lv2:port <stereomixer_8ch/in1> ,
+		<stereomixer_8ch/in2> ,
+		<stereomixer_8ch/in3> ,
+		<stereomixer_8ch/in4> ,
+		<stereomixer_8ch/in5> ,
+		<stereomixer_8ch/in6> ,
+		<stereomixer_8ch/in7> ,
+		<stereomixer_8ch/in8> ,
+		<stereomixer_8ch/masterVolume> ,
+		<stereomixer_8ch/mute1> ,
+		<stereomixer_8ch/mute2> ,
+		<stereomixer_8ch/mute3> ,
+		<stereomixer_8ch/mute4> ,
+		<stereomixer_8ch/mute5> ,
+		<stereomixer_8ch/mute6> ,
+		<stereomixer_8ch/mute7> ,
+		<stereomixer_8ch/mute8> ,
+		<stereomixer_8ch/outL> ,
+		<stereomixer_8ch/outR> ,
+		<stereomixer_8ch/pan1> ,
+		<stereomixer_8ch/pan2> ,
+		<stereomixer_8ch/pan3> ,
+		<stereomixer_8ch/pan4> ,
+		<stereomixer_8ch/pan5> ,
+		<stereomixer_8ch/pan6> ,
+		<stereomixer_8ch/pan7> ,
+		<stereomixer_8ch/pan8> ,
+		<stereomixer_8ch/solo1> ,
+		<stereomixer_8ch/solo2> ,
+		<stereomixer_8ch/solo3> ,
+		<stereomixer_8ch/solo4> ,
+		<stereomixer_8ch/solo5> ,
+		<stereomixer_8ch/solo6> ,
+		<stereomixer_8ch/solo7> ,
+		<stereomixer_8ch/solo8> ,
+		<stereomixer_8ch/volume1> ,
+		<stereomixer_8ch/volume2> ,
+		<stereomixer_8ch/volume3> ,
+		<stereomixer_8ch/volume4> ,
+		<stereomixer_8ch/volume5> ,
+		<stereomixer_8ch/volume6> ,
+		<stereomixer_8ch/volume7> ,
+		<stereomixer_8ch/volume8> ;
+	lv2:prototype <http://github.com/blablack/ams-lv2/stereomixer_8ch> ;
+	a ingen:Block .
+
+<stereomixer_8ch/in1>
+	lv2:index 1 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/in2>
+	lv2:index 6 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/in3>
+	lv2:index 11 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/in4>
+	lv2:index 16 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/in5>
+	lv2:index 21 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/in6>
+	lv2:index 26 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/in7>
+	lv2:index 31 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/in8>
+	lv2:index 36 ;
+	a lv2:AudioPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/masterVolume>
+	ingen:value 1.0 ;
+	lv2:index 0 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/mute1>
+	ingen:value 0.0 ;
+	lv2:index 2 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/mute2>
+	ingen:value 0.0 ;
+	lv2:index 7 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/mute3>
+	ingen:value 0.0 ;
+	lv2:index 12 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/mute4>
+	ingen:value 0.0 ;
+	lv2:index 17 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/mute5>
+	ingen:value 0.0 ;
+	lv2:index 22 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/mute6>
+	ingen:value 0.0 ;
+	lv2:index 27 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/mute7>
+	ingen:value 0.0 ;
+	lv2:index 32 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/mute8>
+	ingen:value 0.0 ;
+	lv2:index 37 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/outL>
+	lv2:index 41 ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<stereomixer_8ch/outR>
+	lv2:index 42 ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<stereomixer_8ch/pan1>
+	ingen:value 0.0 ;
+	lv2:index 5 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/pan2>
+	ingen:value 0.0 ;
+	lv2:index 10 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/pan3>
+	ingen:value -0.80661374 ;
+	lv2:index 15 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/pan4>
+	ingen:value 0.8230722 ;
+	lv2:index 20 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/pan5>
+	ingen:value 0.0 ;
+	lv2:index 25 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/pan6>
+	ingen:value 0.0 ;
+	lv2:index 30 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/pan7>
+	ingen:value 0.0 ;
+	lv2:index 35 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/pan8>
+	ingen:value 0.0 ;
+	lv2:index 40 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/solo1>
+	ingen:value 0.0 ;
+	lv2:index 3 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/solo2>
+	ingen:value 0.0 ;
+	lv2:index 8 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/solo3>
+	ingen:value 0.0 ;
+	lv2:index 13 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/solo4>
+	ingen:value 0.0 ;
+	lv2:index 18 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/solo5>
+	ingen:value 0.0 ;
+	lv2:index 23 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/solo6>
+	ingen:value 0.0 ;
+	lv2:index 28 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/solo7>
+	ingen:value 0.0 ;
+	lv2:index 33 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/solo8>
+	ingen:value 0.0 ;
+	lv2:index 38 ;
+	lv2:portProperty lv2:toggled ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/volume1>
+	ingen:value 1.0 ;
+	lv2:index 4 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/volume2>
+	ingen:value 1.0 ;
+	lv2:index 9 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/volume3>
+	ingen:value 1.0 ;
+	lv2:index 14 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/volume4>
+	ingen:value 1.0 ;
+	lv2:index 19 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/volume5>
+	ingen:value 1.0 ;
+	lv2:index 24 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/volume6>
+	ingen:value 1.0 ;
+	lv2:index 29 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/volume7>
+	ingen:value 1.0 ;
+	lv2:index 34 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<stereomixer_8ch/volume8>
+	ingen:value 1.0 ;
+	lv2:index 39 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+

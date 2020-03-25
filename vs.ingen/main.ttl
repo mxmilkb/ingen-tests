@@ -1,0 +1,307 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix ingen: <http://drobilla.net/ns/ingen#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix midi: <http://lv2plug.in/ns/ext/midi#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix patch: <http://lv2plug.in/ns/ext/patch#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<audio_out_1>
+	ingen:canvasX 1137.0 ;
+	ingen:canvasY 563.0 ;
+	lv2:index 4 ;
+	lv2:name "Audio Out 1" ;
+	lv2:symbol "audio_out_1" ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<control>
+	ingen:canvasX 32.0 ;
+	ingen:canvasY 32.0 ;
+	atom:bufferType atom:Sequence ;
+	atom:supports patch:Message ;
+	<http://lv2plug.in/ns/ext/resize-port#minimumSize> 4096 ;
+	lv2:designation lv2:control ;
+	lv2:index 0 ;
+	lv2:name "Control" ;
+	lv2:portProperty lv2:connectionOptional ;
+	lv2:symbol "control" ;
+	a atom:AtomPort ,
+		lv2:InputPort .
+
+<cv_in_1>
+	ingen:canvasX 142.0 ;
+	ingen:canvasY 274.0 ;
+	ingen:value 0.0 ;
+	lv2:index 2 ;
+	lv2:maximum 1.0 ;
+	lv2:minimum 0.0 ;
+	lv2:name "CV In 1" ;
+	lv2:symbol "cv_in_1" ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<cv_in_2>
+	ingen:canvasX 161.0 ;
+	ingen:canvasY 343.0 ;
+	ingen:value 0.04691526 ;
+	lv2:index 3 ;
+	lv2:maximum 1.0 ;
+	lv2:minimum 0.0 ;
+	lv2:name "CV In 2" ;
+	lv2:symbol "cv_in_2" ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<cvtocontrol>
+	ingen:canvasX 323.0 ;
+	ingen:canvasY 325.0 ;
+	ingen:polyphonic false ;
+	lv2:port <cvtocontrol/input> ,
+		<cvtocontrol/output> ;
+	lv2:prototype <http://github.com/blablack/ams-lv2/cvtocontrol> ;
+	a ingen:Block .
+
+<cvtocontrol/input>
+	ingen:value -0.32448542 ;
+	lv2:index 0 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<cvtocontrol/output>
+	lv2:index 1 ;
+	a lv2:ControlPort ,
+		lv2:OutputPort .
+
+<lfo>
+	ingen:canvasX 562.0 ;
+	ingen:canvasY 210.0 ;
+	ingen:polyphonic false ;
+	lv2:port <lfo/freq> ,
+		<lfo/outRectangle> ,
+		<lfo/outSampleHold> ,
+		<lfo/outSawDown> ,
+		<lfo/outSawUp> ,
+		<lfo/outSine> ,
+		<lfo/outTriangle> ,
+		<lfo/phi0> ,
+		<lfo/reset> ;
+	lv2:prototype <http://github.com/blablack/ams-lv2/lfo> ;
+	a ingen:Block .
+
+<lfo/freq>
+	ingen:value 0.96204954 ;
+	lv2:index 1 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<lfo/outRectangle>
+	lv2:index 7 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/outSampleHold>
+	lv2:index 8 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/outSawDown>
+	lv2:index 6 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/outSawUp>
+	lv2:index 5 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/outSine>
+	lv2:index 3 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/outTriangle>
+	lv2:index 4 ;
+	a lv2:CVPort ,
+		lv2:OutputPort .
+
+<lfo/phi0>
+	ingen:value 0.0 ;
+	lv2:index 2 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<lfo/reset>
+	ingen:value 0.0 ;
+	lv2:index 0 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<>
+	ingen:arc [
+		ingen:head <vco3/freq> ;
+		ingen:tail <lfo/outSine>
+	] , [
+		ingen:head <audio_out_1> ;
+		ingen:tail <vco3/out>
+	] , [
+		ingen:head <cvtocontrol/input> ;
+		ingen:tail <cv_in_2>
+	] , [
+		ingen:head <lfo/reset> ;
+		ingen:tail <cv_in_1>
+	] , [
+		ingen:head <lfo/freq> ;
+		ingen:tail <cvtocontrol/output>
+	] ;
+	ingen:block <cvtocontrol> ,
+		<lfo> ,
+		<vco3> ;
+	ingen:polyphony 1 ;
+	<http://lv2plug.in/ns/extensions/ui#ui> ingen:GraphUIGtk2 ;
+	lv2:extensionData <http://lv2plug.in/ns/ext/state#interface> ;
+	lv2:port <audio_out_1> ,
+		<control> ,
+		<cv_in_1> ,
+		<cv_in_2> ,
+		<notify> ;
+	doap:name "vs" ;
+	a ingen:Graph ,
+		lv2:Plugin .
+
+<notify>
+	ingen:canvasX 128.0 ;
+	ingen:canvasY 32.0 ;
+	atom:bufferType atom:Sequence ;
+	atom:supports patch:Message ;
+	<http://lv2plug.in/ns/ext/resize-port#minimumSize> 4096 ;
+	lv2:designation lv2:control ;
+	lv2:index 1 ;
+	lv2:name "Notify" ;
+	lv2:portProperty lv2:connectionOptional ;
+	lv2:symbol "notify" ;
+	a atom:AtomPort ,
+		lv2:OutputPort .
+
+<vco3>
+	ingen:canvasX 848.0 ;
+	ingen:canvasY 201.0 ;
+	ingen:polyphonic false ;
+	lv2:port <vco3/edge> ,
+		<vco3/expFM> ,
+		<vco3/expFMGain> ,
+		<vco3/freq> ,
+		<vco3/linFM> ,
+		<vco3/linFMGain> ,
+		<vco3/octave> ,
+		<vco3/out> ,
+		<vco3/phi0> ,
+		<vco3/pw0> ,
+		<vco3/pwGain> ,
+		<vco3/pwPort> ,
+		<vco3/semitone> ,
+		<vco3/sync> ,
+		<vco3/tune> ,
+		<vco3/waveForm> ;
+	lv2:prototype <http://github.com/blablack/ams-lv2/vco3> ;
+	a ingen:Block .
+
+<vco3/edge>
+	ingen:value 1.0 ;
+	lv2:index 11 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<vco3/expFM>
+	ingen:value 0.0 ;
+	lv2:index 1 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<vco3/expFMGain>
+	ingen:value 0.0 ;
+	lv2:index 13 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<vco3/freq>
+	ingen:value 0.86243427 ;
+	lv2:index 0 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<vco3/linFM>
+	ingen:value 0.0 ;
+	lv2:index 2 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<vco3/linFMGain>
+	ingen:value 0.0 ;
+	lv2:index 14 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<vco3/octave>
+	ingen:value 3.0 ;
+	lv2:index 6 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<vco3/out>
+	lv2:index 15 ;
+	a lv2:AudioPort ,
+		lv2:OutputPort .
+
+<vco3/phi0>
+	ingen:value 0.0 ;
+	lv2:index 12 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<vco3/pw0>
+	ingen:value 0.5 ;
+	lv2:index 9 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<vco3/pwGain>
+	ingen:value 0.0 ;
+	lv2:index 10 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<vco3/pwPort>
+	ingen:value 0.0 ;
+	lv2:index 3 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<vco3/semitone>
+	ingen:value 0.0 ;
+	lv2:index 8 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<vco3/sync>
+	ingen:value 0.0 ;
+	lv2:index 4 ;
+	a lv2:CVPort ,
+		lv2:InputPort .
+
+<vco3/tune>
+	ingen:value 0.0 ;
+	lv2:index 7 ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
+<vco3/waveForm>
+	ingen:value 0.0 ;
+	lv2:index 5 ;
+	lv2:portProperty lv2:enumeration ;
+	a lv2:ControlPort ,
+		lv2:InputPort .
+
